@@ -1,0 +1,186 @@
+*
+
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #360404;
+  color: #fff;
+}
+
+.timeline {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.timeline h1 {
+  text-align: center;
+  font-size: 42px;
+  color: #cfa44a;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #aaa;
+}
+
+.timeline-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: #444;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  width: 15px;
+  height: 15px;
+  background: #cfa44a;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left::after {
+  right: -8px;
+}
+
+.timeline-item.right::after {
+  left: -8px;
+}
+
+.content {
+  background: #111;
+  border: 1px solid #cfa44a;
+  padding: 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.content:hover {
+  transform: translateY(-5px);
+}
+
+.content img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.year {
+  color: #cfa44a;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.content h3 {
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.content p {
+  color: #ccc;
+  font-size: 15px;
+}
+
+
+
+.hero-header {
+  width: 100;  
+  text-align: center;
+  padding: 50px 20px 40px;
+  background: linear-gradient(circle, #5f0909 0%, #000000 70%);
+}
+
+.stars {
+  color: #cfa44a;
+  font-size: 28px;
+  letter-spacing: 6px;
+  margin-bottom: 15px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cup {
+  width: 90px;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.cup:hover {
+  transform: scale(1.1);
+}
+
+
+.title h1 {
+  font-size: 42px;
+  color: #cfa44a;
+}
+
+.title p {
+  color: #aaa;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .cup {
+    width: 70px;
+  }
+
+  .stars {
+    font-size: 22px;
+  }
+}
+
+.yt-btn{
+  display: inline-block;
+  margin-top: 15px;
+  background: #ff0000;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
