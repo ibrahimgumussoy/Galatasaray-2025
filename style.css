@@ -159,21 +159,19 @@ body {
   font-size: 16px;
 }
 
-
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
+/* Telefonlar (tek düzen) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 15px;
   }
 
-  .cup {
-    width: 70px;
+/* Küçük telefonlar için */
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 15px;
+    max-width: 100%;
+    padding: 18px;
   }
-
-  .stars {
-    font-size: 22px;
-  }
-}
-
 .yt-btn{
   display: inline-block;
   margin-top: 15px;
@@ -184,3 +182,4 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+
