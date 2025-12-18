@@ -159,19 +159,21 @@ body {
   font-size: 16px;
 }
 
-/* Telefonlar (tek düzen) */
-@media screen and (max-width: 480px) {
-  body {
-    padding: 15px;
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
   }
 
-/* Küçük telefonlar için */
-@media screen and (max-width: 400px) {
-  .container {
-    padding: 15px;
-    max-width: 100%;
-    padding: 18px;
+  .cup {
+    width: 70px;
   }
+
+  .stars {
+    font-size: 22px;
+  }
+}
+
 .yt-btn{
   display: inline-block;
   margin-top: 15px;
@@ -183,3 +185,26 @@ body {
   font-weight: bold;
 }
 
+
+.month-filter {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px 0 10px;
+}
+
+.month-filter button {
+  background: transparent;
+  border: 1px solid #cfa44a;
+  color: #cfa44a;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.month-filter button:hover,
+.month-filter button.active {
+  background: #cfa44a;
+  color: #000;
+}
