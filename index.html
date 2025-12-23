@@ -8,6 +8,38 @@
 </head>
 <body>
 
+<audio id="gsMusic">
+  <source id="musicSource" src="muzik/marsi1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-player-container">
+  <div id="playlist" class="playlist">
+    <div class="playlist-item" onclick="changeMusic('muzik/poci.mp3', this)">Poci Sentar</div>
+    <div class="playlist-item" onclick="changeMusic('muzik/askinolayim.mp3', this)">Aşkın Olayım</div>
+    <div class="playlist-item" onclick="changeMusic('muzik/CimbomGalatasaray.mp3', this)">Cimbom Galatasaray</div>
+    <div class="playlist-item" onclick="changeMusic('muzik/Mixea_MediumNeutral_hd_son hali.wav', this)">ICARDI</div>
+  </div>
+  
+  <div id="music-control" class="music-btn">
+    <span id="music-icon">🎵</span>
+  </div>
+</div>
+
+
+<div class="month-filter">
+  <button class="active" onclick="filterMonth('all')">Tümü</button>
+  <button onclick="filterMonth('Ocak')">Ocak</button>
+  <button onclick="filterMonth('Şubat')">Şubat</button>
+  <button onclick="filterMonth('Mart')">Mart</button>
+  <button onclick="filterMonth('Nisan')">Nisan</button>
+  <button onclick="filterMonth('Mayıs')">Mayıs</button>
+  <button onclick="filterMonth('Ağustos')">Ağustos</button>
+  <button onclick="filterMonth('Eylül')">Eylül</button>
+  <button onclick="filterMonth('Ekim')">Ekim</button>
+  <button onclick="filterMonth('Kasım')">Kasım</button>
+  <button onclick="filterMonth('Aralık')">Aralık</button>
+</div>
+
 <!-- HERO HEADER -->
 <div class="hero-header">
 
@@ -31,21 +63,24 @@
 
   <div class="timeline-container">
 
-<!--OLAY 1-->
-    <div class="timeline-item left">
-      <div class="content">
+<!-- OLAY 1 -->
+    <div class="timeline-item left" data-month="Ocak">
+      <div class="content"
+        data-images="images/gsgözimages1.jpeg,images/gsgözimages2.jpeg,images/gsgözimages3.jpeg,images/gsgözimages4.jpeg,images/gsgözimages5.jpeg">
         <img src="images/gsgöz.jpg">
-        <span class="year"> 4 Ocak 2025</span>
+        <span class="year">4 Ocak 2025</span>
         <h3>GALATASARAY 2-1 GÖZTEPE</h3>
-        <p>2025'in ilk maçında evimizde Göztepe'yi Victor Osimhen ve Yunus Akgün'ün golleriyle 2-1 yendik.
-          Göztepe'nin tek golü Romulo'dan geldi.
+        <p>
+          2025'in ilk maçında evimizde Göztepe'yi Victor Osimhen ve Yunus Akgün'ün
+          golleriyle 2-1 yendik. Göztepe'nin tek golü Romulo'dan geldi.
         </p>
-        <a href="https://youtu.be/Wc-TuiI9aHY?si=oFDK2yw-xwQK1B35" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+        <a href="https://youtu.be/Wc-TuiI9aHY?si=oFDK2yw-xwQK1B35"
+           class="yt-btn" target="_blank">▶ Maçın Özeti</a>
       </div>
     </div>
 
     <!--OLAY 2-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Ocak">
       <div class="content">
         <img src="images/gsibfkcup.jpg">
         <span class="year">8 Ocak 2025</span>
@@ -59,7 +94,7 @@
     </div>
 
        <!--OLAY 3-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Ocak">
       <div class="content">
         <img src="images/ibfkgs.jpg">
         <span class="year">11 Ocak 2025</span>
@@ -72,7 +107,7 @@
     </div>
 
      <!--OLAY 4-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Ocak">
       <div class="content">
         <img src="images/htygs.jpg">
         <span class="year">17 Ocak 2025</span>
@@ -85,7 +120,7 @@
     </div>
 
      <!--OLAY 5-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Ocak">
       <div class="content">
         <img src="images/gskiev.webp">
         <span class="year">21 Ocak 2025</span>
@@ -98,7 +133,7 @@
     </div>
 
      <!--OLAY 6-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Ocak">
       <div class="content">
         <img src="images/gskon.jpg">
         <span class="year">25 Ocak 2025</span>
@@ -111,7 +146,7 @@
     </div>
 
      <!--OLAY 7-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Ocak">
       <div class="content">
         <img src="images/ajaxgsuel.jpg">
         <span class="year">30 Ocak 2025</span>
@@ -125,7 +160,7 @@
     </div>
 
       <!--OLAY 8-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Şubat">
       <div class="content">
         <img src="images/gfkgs.jpg">
         <span class="year"> 3 Şubat 2025</span>
@@ -138,7 +173,7 @@
     </div>
 
       <!--OLAY 9-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Şubat">
       <div class="content">
         <img src="images/bolugs.jpg">
         <span class="year">6 Şubat 2025</span>
@@ -151,7 +186,7 @@
     </div>
 
       <!--OLAY 10-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Şubat">
       <div class="content">
         <img src="images/gsads.jpg">
         <span class="year"> 9 Şubat 2025</span>
@@ -165,7 +200,7 @@
     </div>
 
       <!--OLAY 11-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Şubat">
       <div class="content">
         <img src="images/azgs.jpg">
         <span class="year">13 Şubat 2025</span>
@@ -179,7 +214,7 @@
     </div>
 
       <!--OLAY 12-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Şubat">
       <div class="content">
         <img src="images/rizegs.jpg">
         <span class="year"> 17 Şubat 2025</span>
@@ -192,7 +227,7 @@
     </div>
 
       <!--OLAY 13-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Şubat">
       <div class="content">
         <img src="images/gsaz.jpg">
         <span class="year">20 Şubat 2025</span>
@@ -205,7 +240,7 @@
     </div>
 
       <!--OLAY 14-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Şubat">
       <div class="content">
         <img src="images/gsfb.jpg">
         <span class="year"> 24 Şubat 2025</span>
@@ -217,7 +252,7 @@
     </div>
 
       <!--OLAY 15-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Şubat">
       <div class="content">
         <img src="images/gskonztk.jpg">
         <span class="year">27 Şubat 2025</span>
@@ -230,7 +265,7 @@
     </div>
 
       <!--OLAY 16-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Mart">
       <div class="content">
         <img src="images/kspgs.jpg">
         <span class="year"> 2 Mart 2025</span>
@@ -243,7 +278,7 @@
     </div>
 
       <!--OLAY 17-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Mart">
       <div class="content">
         <img src="images/alygs.jpg">
         <span class="year">9 Mart 2025</span>
@@ -257,7 +292,7 @@
     </div>
 
       <!--OLAY 18-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Mart">
       <div class="content">
         <img src="images/gsant.jpg">
         <span class="year"> 14 Mart 2025</span>
@@ -270,7 +305,7 @@
     </div>
 
       <!--OLAY 19-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Mart">
       <div class="content">
         <img src="images/bjkgs.jpg">
         <span class="year">29 Mart 2025</span>
@@ -284,7 +319,7 @@
     </div>
 
       <!--OLAY 20-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Nisan">
       <div class="content">
         <img src="images/fbgscup.jpg">
         <span class="year">2 Nisan 2025</span>
@@ -298,7 +333,7 @@
     </div>
 
       <!--OLAY 21-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Nisan">
       <div class="content">
         <img src="images/samgs.jpg">
         <span class="year">11 Nisan 2025</span>
@@ -312,7 +347,7 @@
     </div>
 
       <!--OLAY 22-->
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-month="Nisan">
       <div class="content">
         <img src="images/gsbod.jpg">
         <span class="year">18 Nisan 2025</span>
@@ -326,7 +361,7 @@
     </div>
 
       <!--OLAY 23-->
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-month="Nisan">
       <div class="content">
         <img src="images/kongscupyarı.jpg">
         <span class="year">22 Nisan 2025</span>
@@ -339,28 +374,441 @@
       </div>
     </div>
 
+      <!--OLAY 24-->
+    <div class="timeline-item right" data-month="Nisan">
+      <div class="content">
+        <img src="images/eypgs.jpg">
+        <span class="year">27 Nisan 2025</span>
+        <h3>EYÜPSPOR 1-5 GALATASARAY</h3>
+        <p>Ligin 33. haftasında Eyüpspor deplasmanındaydık. Sallai, Torreira, Osimhen ve Morata (2)'nın golleriyle 5-1 kazandık.
+          Fenerbahçe de kendi maçını kazanınca 5 puanlık fark devam etti.
+        </p>
+        <a href="https://youtu.be/6JdYq-yQynw?si=FXYREH8UzDsnSJHo" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 25-->
+    <div class="timeline-item left" data-month="Mayıs">
+      <div class="content">
+        <img src="images/gssvs.jpg">
+        <span class="year">3 Mayıs 2025</span>
+        <h3>GALATASARAY 4-1 SİVASSPOR</h3>
+        <p>Mayısların sahibi Galatasaray, bu ayda ki ilk maçında evinde Sivasspor'u ağırladı. Torreira, Osimhen (2) ve Barış
+          Alper Yılmaz'ın ilk yarıda attığı gollerle maçı 4-1 kazandık. Ertesi gün ise Fenerbahçe-Beşiktaş derbisi var.
+          Derbiyi, Beşiktaş 1-0 kazandı ve Fenerbahçe ile aramızdaki puan farkı 8 oldu. Mayıs ayına girer girmez şampiyonluk çözülmüş oldu.
+        </p>
+        <a href="https://youtu.be/EQ-DuvQA194?si=0vWWcjULqYYwjvdR" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 26-->
+    <div class="timeline-item right" data-month="Mayıs">
+      <div class="content">
+        <img src="images/tsgs.jpg">
+        <span class="year">10 Mayıs 2025</span>
+        <h3>TRABZONSPOR 0-2 GALATASARAY</h3>
+        <p>Ligin 35. haftasında 8 puan farkla lider olan Galatasaray'ımız, bu hafta Trabzonspor deplasmanındaydı. Abdülkerim
+          Bardakcı ve Morata'nın golleriyle maçı 2-0 kazandık. 4 gün sonra Türkiye Kupası Finalinde Trabzonspor ile tekrar karşılaşacağız. Bir nevi antrenman maçı gibi oldu.
+        </p>
+        <a href="https://youtu.be/DC19OvhHuCA?si=Zxp7UmtsD3I7qT-k" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 27-->
+    <div class="timeline-item left" data-month="Mayıs">
+      <div class="content">
+        <img src="images/tsgscup.jpg">
+        <span class="year">14 Mayıs 2025</span>
+        <h3>TRABZONSPOR 0-3 GALATASARAY</h3>
+        <p>Türkiye Kupası'nı en fazla kazanan Galatasaray'ımız, 19. kupası için çıktığı maçta Trabzonspor'u Barış Alper ve
+          Osimhen (2)'in golleriyle 3-0 kazandı. 2019'dan beri olan kupa hasretimiz sona ermiş oldu.
+        </p>
+        <a href="https://youtu.be/Y5G_gIQrxyI?si=H0qLFLG_K6mMbUBf" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 28-->
+    <div class="timeline-item right" data-month="Mayıs">
+      <div class="content">
+        <img src="images/gskys.jpg">
+        <span class="year">18 Mayıs 2025</span>
+        <h3>GALATASARAY 3-0 KAYSERİSPOR</h3>
+        <p>Veee geldik şampiyonluk maçına... Berabere bitse bile şampiyon olacağımız maçta Osimhen, Barış Alper ve efsanemiz
+          FERNANDO MUSLERA'nın golleriyle 3-0 kazandık. Ligimizde armasına 5. YILDIZI TAKAN İLK VE TEK TAKIM GALATASARAY OLDU. 
+        </p>
+        <a href="https://youtu.be/GsTG5M2xD-s?si=3SJbqdB7aEx7EJY4" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 29-->
+    <div class="timeline-item left" data-month="Mayıs">
+      <div class="content">
+        <img src="images/gözgs.jpg">
+        <span class="year">24 Mayıs 2025</span>
+        <h3>GÖZTEPE 0-2 GALATASARAY</h3>
+        <p>Artık bizim için formalite icabı olan maçlara geldik. İlk formalite maçımız için İzmir'deyiz. Kaan Ayhan frikikten
+          belkide 2025 yılında Galatasaray'ın en güzel gollerinden birini attı. Uzatmalarda da Morata attı ve 2-0 kazandık. Bu
+          galibiyetten daha güzel haber Hatay'dan geldi. Küme düşen Hatayspor, Fenerbahçe'yi 4-2 yendi. Puan farkı çift hanelere (11) çıkmış oldu.
+        </p>
+        <a href="https://youtu.be/Ka5a-EpLXHU?si=iKrBqwi-Ux_DTA4g" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 30-->
+    <div class="timeline-item right" data-month="Mayıs">
+      <div class="content">
+        <img src="images/gs20ibfk.jpg">
+        <span class="year">30 Mayıs 2025</span>
+        <h3>GALATASARAY 2-0 BAŞAKŞEHİR</h3>
+        <p>Ve çift kupalı müthiş bir sezonun son maçında yani formalite olan 2. maçımızda evimizde Başakşehir ile oynadık.
+          Mertens ve Osimhen'in attığı gollerle sezonu tamamladık. Çok sevindik, güldük, eğlendik ama biraz da duygulanma vakti geldi.
+          Dries Mertens ve Fernando Muslera'ya veda zamanı geldi... 
+        </p>
+        <a href="https://youtu.be/81kO1vv3AP4?si=d7wZQwr5vyyikzFV" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 31-->
+    <div class="timeline-item left" data-month="Ağustos">
+      <div class="content">
+        <img src="images/gazgs.jpg">
+        <span class="year">8 Ağustos 2025</span>
+        <h3>GAZİANTEP FK 0-3 GALATASARAY</h3>
+        <p>Vee 5 yıldızlı Galatasaray'ın ilk resmi maçına geldik. Yeni sezonun ilk maçında Gaziantep deplasmanında Barış Alper (2)
+          ve Eren Elmalı'nın golleriyle 3-0 kazandık ve lige 3 puanla başladık.
+        </p>
+        <a href="https://youtu.be/a-QOt1xB77c?si=_JJkFoaKmtJ1ns1o" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 32-->
+    <div class="timeline-item right" data-month="Ağustos">
+      <div class="content">
+        <img src="images/gskar.jpg">
+        <span class="year">15 Ağustos 2025</span>
+        <h3>GALATASARAY 3-0 F. KARAGÜMRÜK</h3>
+        <p>Uzun zaman sonra evimizdeyiz. Ligin 2. haftasında Karagümrük'ü konuk ediyoruz. Barış Alper ve rakip futbolcunun
+          kendi kalesine atmasıyla 2-0'ı yakaladık. 87. dakikada ise sahneye bir isim çıktı. Aylardır beklediğimiz, kralımız,
+          aşkımız Mauro Icardi takımımızın 3. golünü attı ve maçın sonucunu belirledi.
+        </p>
+        <a href="https://youtu.be/awAZ3I7C-9U?si=aXRqIKhGubRJvZB9" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 33-->
+    <div class="timeline-item left" data-month="Ağustos">
+      <div class="content">
+        <img src="images/kaygs.jpg">
+        <span class="year">24 Ağustos 2025</span>
+        <h3>KAYSERİSPOR 0-4 GALATASARAY</h3>
+        <p>Ligin 3. haftasında Kayseri'deyiz. Eren Elmalı'nın attığı 2 golle 2-0 öne geçtik. Bu maçta ise sahneye diğer aşkımız
+          aylarca transferini beklediğimiz Osimhen, Galatasaray'ın sözleşmeli futbolcusu olarak ilk golünü attı. Son golü ise 
+          Alman yıldızımız, 10 numaramız Leroy Sane attı ve maçı 4-0 kazandık.
+        </p>
+        <a href="https://youtu.be/pvuToCZMR8k?si=PcjR7OU854nfquNa" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 34-->
+    <div class="timeline-item right" data-month="Ağustos">
+      <div class="content">
+        <img src="images/gsçrs.jpg">
+        <span class="year">30 Ağustos 2025</span>
+        <h3>GALATASARAY 3-1 Ç. RİZESPOR</h3>
+        <p>Ligin 4. haftasında Çaykur Rizespor'u konuk ettik. Sanchez, Osimhen ve Icardi'nin golleriyle 3-1 kazandık. Bu sezon
+          ligde ilk kez gol yemiş olduk.
+        </p>
+        <a href="https://youtu.be/5xV1qpwTmRI?si=bf_Yuk8p2VF9S7SR" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 35-->
+    <div class="timeline-item left" data-month="Eylül">
+      <div class="content">
+        <img src="images/eypgss.jpg">
+        <span class="year">13 Eylül 2025</span>
+        <h3>EYÜPSPOR 0-2 GALATASARAY</h3>
+        <p>Ligde 5. haftada Eyüpspor deplasmanında Icardi ve Yunus'un golleriyle rahat bir galibiyet aldık.
+        </p>
+        <a href="https://youtu.be/wS2oQaJ1Ir8?si=X9omHtpD6ON01G-B" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 36-->
+    <div class="timeline-item right" data-month="Eylül">
+      <div class="content">
+        <img src="images/frags.jpg">
+        <span class="year">18 Eylül 2025</span>
+        <h3>E. FRANKFURT 5-1 GALATASARAY</h3>
+        <p>Şampiyonlar Ligi'ne tatsız başladık. Yaşanacak tüm tatsızlıkları tek maçta da yaşadık diyebiliriz. Tek golümüz 
+          Yunus Akgün'den geldi.
+        </p>
+        <a href="https://youtu.be/SPE_bu9Eids?si=UH0Mmic_Bn_16W-Z" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 37-->
+    <div class="timeline-item left" data-month="Eylül">
+      <div class="content">
+        <img src="images/gskonya.jpg">
+        <span class="year">22 Eylül 2025</span>
+        <h3>GALATASARAY 3-1 KONYASPOR</h3>
+        <p>Ligde 6/6 yaparak en yakın rakibimize 6 puan fark attık. Takımımızın gollerini Yunus, Icardi ve Torreira'dan geldi.
+        </p>
+        <a href="https://youtu.be/-_G7w9Y1ikI?si=f4G8h27LYxfhB6SM" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 38-->
+    <div class="timeline-item right" data-month="Eylül">
+      <div class="content">
+        <img src="images/alngs.jpg">
+        <span class="year">26 Eylül 2025</span>
+        <h3>ALANYASPOR 0-1 GALATASARAY</h3>
+        <p>Liverpool maçı öncesinde Alanya deplasmanında çokta iyi oynamadığımız maçta Icardi'nin golüyle 1-0 kazandık.
+          Ligde 7/7 yaptık ve sıradaki maçı beklemeye başladık.
+        </p>
+        <a href="https://youtu.be/FLYDprnimYs?si=NagllmNcC_Y_-6Cl" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 39-->
+    <div class="timeline-item left" data-month="Eylül">
+      <div class="content">
+        <img src="images/gslfc.jpg">
+        <span class="year">30 Eylül 2025</span>
+        <h3>GALATASARAY 1-0 LIVERPOOL</h3>
+        <p>Ve bir İngiliz'in daha İstanbul'dan çıkamadığı maça geldik. Son terine kadar mücadele eden takımımız, Osimhen'in
+          penaltısıyla 1-0 kazandı ve Şampiyonlar Ligi'nde ki ilk galibiyetimizi aldık.
+        </p>
+        <a href="https://youtu.be/vX2xzCdRVss?si=bwFF9j_oRjPwTeCl" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+      <!--OLAY 40-->
+    <div class="timeline-item right" data-month="Ekim">
+      <div class="content">
+        <img src="images/gs11bjk.jpg">
+        <span class="year">4 Ekim 2025</span>
+        <h3>GALATASARAY 1-1 BEŞİKTAŞ</h3>
+        <p>Liverpool galibiyetinden sonra ligin 8. (sekizinci) haftasında Beşiktaş'ı ağırladık. Önce geriye düştük sonra
+          Sanchez kırmızı gördü. Buna rağmen iyi mücadele eden bir Galatasaray vardı ve İlkay'ın golü ile maç 1-1 bitti.
+          Böylelikle bu sezon ki ilk puan kaybımızı yapmış olduk.
+        </p>
+        <a href="https://youtu.be/g2pkGoLHql4?si=IP3AV42alrE0kZSu" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
+    <!--OLAY 41-->
+    <div class="timeline-item left" data-month="Ekim">
+      <div class="content">
+        <img src="images/basgs.jpg">
+        <span class="year">18 Ekim 2025</span>
+        <h3>BAŞAKŞEHİR 1-2 GALATASARAY</h3>
+        <p>9. haftada Başakşehir Fatih Terim Stadyumundaydık. Alman starımız Leroy Sane'nin 2 golüyle maçı kazandık ve
+          namağlup serimiz devam etti.
+        </p>
+        <a href="https://youtu.be/aVJNzY3tpL4?si=QNIaAJed6I3u6am4" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 42-->
+    <div class="timeline-item right" data-month="Ekim">
+      <div class="content">
+        <img src="images/gsbodo.jpg">
+        <span class="year">22 Ekim 2025</span>
+        <h3>GALATASARAY 3-1 BODO/GLIMT</h3>
+        <p>Şampiyonlar Ligi 3. haftasında Norveç ekibi Bodo'yu konuk ettik. Osimhen'in 2 golü ve Yunus'un golüyle 3 puanı
+          kazanmayı başardık. Devler liginde puanımız 6'ya yükselmiş oldu.
+        </p>
+        <a href="https://youtu.be/TQ7K8w-FcMs?si=chtsk_E7o9s3bebw" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 43-->
+    <div class="timeline-item left" data-month="Ekim">
+      <div class="content">
+        <img src="images/gs31göz.jpg">
+        <span class="year">26 Ekim 2025</span>
+        <h3>GALATASARAY 3-1 GÖZTEPE</h3>
+        <p>Ligin 10. haftasında Göztepe'yi ağırladık. Osimhen, Sara ve Icardi'nin golleriyle rahat kazandık. Böylelikle namağlup serimiz devam etti.
+        </p>
+        <a href="https://youtu.be/GQ5U2zN18rw?si=3G95rV1EjkkMBUIZ" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 44-->
+    <div class="timeline-item right" data-month="Kasım">
+      <div class="content">
+        <img src="images/gsts.jpg">
+        <span class="year">1 Kasım 2025</span>
+        <h3>GALATASARAY 0-0 TRABZONSPOR</h3>
+        <p>11. haftada bu sezonun iddialı takımlarından Trabzonspor'u ağırladık. Maçta gol sesi çıkmadı. Aynı hafta oynanan Beşiktaş-Fenerbahçe
+          derbisini ise Fenerbahçe 3-2 kazandı ve hem ikinciliğe yükseldi hem de puan farkını 4'e düşürdü.
+        </p>
+        <a href="https://youtu.be/bwSb6TGb8GU?si=n45c5yqxCd-jdxSH" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 45-->
+    <div class="timeline-item left" data-month="Kasım">
+      <div class="content">
+        <img src="images/ajags.jpg">
+        <span class="year">5 Kasım 2025</span>
+        <h3>AJAX 0-3 GALATASARAY</h3>
+        <p>Geçen sezon Avrupa Liginde de karşılaştığımız Ajax ile bu sefer Şampiyonlar Liginde karşılaştık. Devler ligine baya kötü başlayan Ajax'ı
+          kendi evinde adeta öttürdük. Osimhen hatt-rick yaptı ve 3 maç üst üste kazanarak puanımızı 9'a çıkardık. 
+        </p>
+        <a href="https://youtu.be/YkTUUzPxsmk?si=x04acQFmu5WUiqKS" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 46-->
+    <div class="timeline-item right" data-month="Kasım">
+      <div class="content">
+        <img src="images/kocgs.jpg">
+        <span class="year">9 Kasım 2025</span>
+        <h3>KOCAELİSPOR 1-0 GALATASARAY</h3>
+        <p>Geldik o maça... En son 29 Mart'ta Süper Lig mağlubiyeti gören Galatasaray'ın namağlup serisi Kocaeli'de bitti. Bu sezonki ilk mağlubiyetimizi
+          yaşadık ve Fenerbahçe kendi maçını kazanınca puan farkı 1'e düştü.
+        </p>
+        <a href="https://youtu.be/H22S70jiato?si=Tuye4hE6cwXG7rRc" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 47-->
+    <div class="timeline-item left" data-month="Kasım">
+      <div class="content">
+        <img src="images/gsgb.jpg">
+        <span class="year">22 Kasım 2025</span>
+        <h3>GALATASARAY 3-2 GENÇLERBİRLİĞİ</h3>
+        <p>Son 2 lig maçında da gol atamayan Galatasaray'ın buna dur demesi gerekiyordu. İlk yarıyı 1-0 geride kapatınca "Acaba yine mi puan kaybı geliyor?"
+          dedirtti. İkinci yarıda ise Icardi, Barış Alper ve İlkay'ın golleriyle maçı çevirdik. Üstüne bir de yedik ve maç 3-2 noktalandı.
+        </p>
+        <a href="https://youtu.be/FWKBZ4e8Ras?si=aghvhrDIW3hNiKKs" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 48-->
+    <div class="timeline-item right" data-month="Kasım">
+      <div class="content">
+        <img src="images/gsusg.jpg">
+        <span class="year">25 Kasım 2025</span>
+        <h3>GALATASARAY 0-1 UNION SAINT G.</h3>
+        <p>Şampiyonlar Liginde son 3 maçını Galatasaray ilk 8 için iddialı bir konuma geldi. Evimizde Union'u da yenersek iyice rahatlarız dedik.
+          Demez olaydık... Takım adeta revire dönmüştü. Osimhen de sakattı. 57. dakika da yediğimiz golle Avrupa'da ki galibiyet serimiz bitti.
+        </p>
+        <a href="https://youtu.be/4w_L-l8O6B4?si=eXzsUiJjH1m2TB2u" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+        <!--OLAY 49-->
+    <div class="timeline-item left" data-month="Aralık">
+      <div class="content">
+        <img src="images/fb11gs.jpg">
+        <span class="year">1 Aralık 2025</span>
+        <h3>FENERBAHÇE 1-1 GALATASARAY</h3>
+        <p>Ve geldik bu toprakların en büyük derbisine. Fenerbahçe kazanırse uzun zaman sonra lider olacak. İlk yarıyı Sane'nin golüyle 1-0 önde bitirdik.
+          İkinci yarıda ise hakemin skandal kararlarına maruz kaldık. 90+5'te John Duran'ın golüyle derbi 1-1 berabere bitti. Trabzonspor da kendi maçını
+          kazandı ve yarışa ortak oldu.
+        </p>
+        <a href="https://youtu.be/5LG53xa9zi8?si=5ia__EuRG2Fno96M" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 50-->
+    <div class="timeline-item right" data-month="Aralık">
+      <div class="content">
+        <img src="images/gsam.jpg">
+        <span class="year">5 Aralık 2025</span>
+        <h3>GALATASARAY 3-2 SAMSUNSPOR</h3>
+        <p>Ligin 15. haftasında Samsunspor'u konuk ettik. Sane ve Osimhen'in golüyle ilk yarıyı 2-0 önde bitirdik. İkinci yarıda Samsunspor bulduğu
+          2 golle beraberliği yakaladı. 90+3'te yıldızımız Osimhen bir kez daha sahneye çıktı ve 3 puanı kazandırdı. Fenerbahçe, Başakşehir'e puan kaybetti ve
+          namağlup olarak 3. sıraya düştü. Ancak Trabzonspor hız kesmeden geliyor.
+        </p>
+        <a href="https://youtu.be/Zy0CFTvL96U?si=rIgrn-sUOQgjhtJh" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 51-->
+    <div class="timeline-item left" data-month="Aralık">
+      <div class="content">
+        <img src="images/mongs.jpg">
+        <span class="year">9 Aralık 2025</span>
+        <h3>MONACO 1-0 GALATASARAY</h3>
+        <p>2025'in son Avrupa maçında UEFA Süper Kupa'yı kazandığımız stattaydık. Özellikle ikinci yarı çok varlık gösteremedik ve 1-0'lık yenilgiyle
+          İstanbul'a döndük. İlk 8 hayaki kurarken, şimdi elenme ihtimalimiz bile var. 
+        </p>
+        <a href="https://youtu.be/cN8n5bjimgk?si=Y_2_yk_dQAghRiAF" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 52-->
+    <div class="timeline-item right" data-month="Aralık">
+      <div class="content">
+        <img src="images/antgs4.jpg">
+        <span class="year">13 Aralık 2025</span>
+        <h3>ANTALYASPOR 1-4 GALATASARAY</h3>
+        <p>Ligin 16. haftasında Antalya'daydık. Çok rahat bir galibiyet aldık. Sane, Sallai, Osimhen ve Icardi'nin golleriyle 4-1 kazandık. Aynı
+          hafta Trabzonspor, Beşiktaş ile 3-3 berabere kaldı ve üçüncülüğe düştü. Fenerbahçe ise sahibi olduğu ikincilik koltuğuna tekrardan kavuştu.
+        </p>
+        <a href="https://youtu.be/hfNw3FUGfcw?si=yZF8GMgt2CPM7YwF" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 53-->
+    <div class="timeline-item left" data-month="Aralık">
+      <div class="content">
+        <img src="images/gs1ibfk.jpg">
+        <span class="year">18 Aralık 2025</span>
+        <h3>GALATASARAY 1-0 BAŞAKŞEHİR</h3>
+        <p>Türkiye Kupası'nın ilk haftasında Başakşehir'i konuk ettik. Gayet sıkıcı geçen maçta tek golümüzü Ahmed Kutucu attı ve kupaya 3 puan ile başladık.
+        </p>
+        <a href="https://youtu.be/1c5x7mh8Kek?si=yhOwvkHfFbgwJ3k4" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
+
+    <!--OLAY 52-->
+    <div class="timeline-item right" data-month="Aralık">
+      <div class="content">
+        <img src="images/gsksp.jpg">
+        <span class="year">21 Aralık 2025</span>
+        <h3>GALATASARAY 3-0 KASIMPAŞA</h3>
+        <p>Ligin ilk yarısının son maçında ve yılın bizim için son maçında Kasımpaşa'yı ağırladık. Yunus, Sara ve Icardi'nin golleriyle rahat bir
+          galibiyet aldık. Fenerbahçe de kendi maçını kazandı ve 3 puanlık fark devam etti. Trabzonspor ise Gençlerbirliği'ne kaybetti. Bir nevi yarıştan koptu.
+        </p>
+        <a href="https://beinsports.com.tr/haber/galatasaray-kasimpasa-12" class="yt-btn" target="_blank">▶ Maçın Özeti</a>
+      </div>
+    </div>
 
 
   </div>
 
 </section>
 
+
+
+<!-- MODAL GALERİ -->
+<div id="galleryModal" class="modal">
+  <span class="close">&times;</span>
+  <img id="modalImage">
+
+  <div class="controls">
+    <button id="prev">❮</button>
+    <button id="next">❯</button>
+  </div>
+</div>
+
+<div id="galleryModal" class="modal">
+  <span class="close">&times;</span>
+
+  <img id="modalImage" src="" alt="">
+
+  <button id="prev" class="nav prev">&#10094;</button>
+  <button id="next" class="nav next">&#10095;</button>
+</div>
+
+<script src="script.js"></script>
+<script src="gallery.js"></script>
 </body>
 </html>
