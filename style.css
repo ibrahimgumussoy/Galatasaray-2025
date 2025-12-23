@@ -114,10 +114,13 @@ body {
   font-size: 15px;
 }
 
+.timeline-item {
+  transition: all 0.4s ease-in-out;
+}
 
 
 .hero-header {
-  width: 100;  
+  width: 100%;  
   text-align: center;
   padding: 50px 20px 40px;
   background: linear-gradient(circle, #5f0909 0%, #000000 70%);
@@ -160,17 +163,92 @@ body {
 }
 
 
+/* ===============================
+   TIMELINE RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .timeline-container {
+    width: 95%;
+  }
+
+  .timeline-container::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 20px 20px 20px 60px;
+    left: 0 !important;
+  }
+
+  .timeline-item::after {
+    left: 12px !important;
+    right: auto;
+  }
+
+  .content {
+    font-size: 15px;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .timeline h1 {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .content h3 {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .month-filter {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .month-filter button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+/* ===============================
+   MODAL RESPONSIVE
+================================ */
+
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
+
+  .modal img {
+    max-width: 92%;
+    max-height: 75%;
   }
 
-  .cup {
-    width: 70px;
+  .nav {
+    font-size: 36px;
   }
 
-  .stars {
-    font-size: 22px;
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  .close {
+    font-size: 32px;
+    top: 15px;
+    right: 20px;
   }
 }
 
@@ -207,4 +285,102 @@ body {
 .month-filter button.active {
   background: #cfa44a;
   color: #000;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev { left: 30px; }
+.next { right: 30px; }
+
+
+.music-player-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.playlist {
+  background: rgba(17, 17, 17, 0.95);
+  border: 1px solid #cfa44a;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: none; /* Başlangıçta gizli */
+  width: 200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.playlist-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.playlist-item:hover {
+  background: #cfa44a;
+  color: #000;
+}
+
+.playlist-item.active-song {
+  color: #cfa44a;
+  font-weight: bold;
+}
+
+/* Müzik Butonu (Öncekiyle aynı, sadece pozisyon container'dan geliyor) */
+.music-btn {
+  width: 50px;
+  height: 50px;
+  background: #cfa44a;
+  border: 2px solid #5f0909;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
