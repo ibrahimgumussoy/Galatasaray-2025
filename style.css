@@ -501,3 +501,58 @@ body {
   .prev { left: 10px; }
   .next { right: 10px; }
 }
+
+.filter-wrapper {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.filter-wrapper label {
+  display: block;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+}
+
+.custom-select select {
+  width: 100%;
+  padding: 12px 20px;
+  background: #111;
+  color: #cfa44a; /* Altın Sarısı */
+  border: 2px solid #cfa44a;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  appearance: none; /* Standart ok işaretini kaldır */
+  -webkit-appearance: none;
+}
+
+/* Kendi ok işaretimizi ekleyelim */
+.custom-select::after {
+  content: '▼';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #cfa44a;
+  pointer-events: none;
+}
+
+.custom-select select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(207, 164, 74, 0.5);
+}
+
+/* Mobil için genişlik ayarı */
+@media (max-width: 600px) {
+  .custom-select {
+    width: 80%;
+  }
+}
