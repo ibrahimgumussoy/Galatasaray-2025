@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Galatasaray 2025</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpg" href="images/gslogo.png">
 </head>
 <body>
+
+<div id="galleryModal" class="modal">
+  <span class="close">&times;</span>
+  <img id="modalImage" src="" alt="">
+  <button id="prev" class="nav prev">&#10216;</button>
+  <button id="next" class="nav next">&#10217;</button>
+</div>
 
 <audio id="gsMusic">
   <source id="musicSource" src="muzik/marsi1.mp3" type="audio/mpeg">
@@ -17,6 +25,7 @@
     <div class="playlist-item" onclick="changeMusic('muzik/poci.mp3', this)">Poci Sentar</div>
     <div class="playlist-item" onclick="changeMusic('muzik/askinolayim.mp3', this)">Aşkın Olayım</div>
     <div class="playlist-item" onclick="changeMusic('muzik/CimbomGalatasaray.mp3', this)">Cimbom Galatasaray</div>
+    <div class="playlist-item" onclick="changeMusic('muzik/Mixea_MediumNeutral_hd_son hali.wav', this)">ICARDI</div>
   </div>
   
   <div id="music-control" class="music-btn">
@@ -80,7 +89,8 @@
 
     <!--OLAY 2-->
     <div class="timeline-item right" data-month="Ocak">
-      <div class="content">
+      <div class="content"
+        data-images="images/gs22ibfk1.jpg,images/gs22ibfk2.jpg,images/gs22ibfk3.jpg,images/gs22ibfk4.jpg">
         <img src="images/gsibfkcup.jpg">
         <span class="year">8 Ocak 2025</span>
         <h3>GALATASARAY 2-2 BAŞAKŞEHİR</h3>
@@ -94,7 +104,8 @@
 
        <!--OLAY 3-->
     <div class="timeline-item left" data-month="Ocak">
-      <div class="content">
+      <div class="content"
+        data-images="images/ibfk12gs1.jpg,images/ibfk12gs2.jpg,images/ibfk12gs3.jpg,images/ibfk12gs4.jpg">
         <img src="images/ibfkgs.jpg">
         <span class="year">11 Ocak 2025</span>
         <h3>BAŞAKŞEHİR 1-2 GALATASARAY</h3>
@@ -107,7 +118,8 @@
 
      <!--OLAY 4-->
     <div class="timeline-item right" data-month="Ocak">
-      <div class="content">
+      <div class="content"
+        data-images="images/htygs1.jpg,images/htygs2.jpg,images/htygs3.jpg,images/htygs4.jpg">
         <img src="images/htygs.jpg">
         <span class="year">17 Ocak 2025</span>
         <h3>HATAYSPOR 1-1 GALATASARAY</h3>
@@ -120,7 +132,8 @@
 
      <!--OLAY 5-->
     <div class="timeline-item left" data-month="Ocak">
-      <div class="content">
+      <div class="content"
+      data-images="images/gskiev1.jpg, images/gskiev2.jpg, images/gskiev3.jpg, images/gskiev4.jpg">
         <img src="images/gskiev.webp">
         <span class="year">21 Ocak 2025</span>
         <h3>GALATASARAY 3-3 DİNAMO KİEV</h3>
@@ -133,7 +146,8 @@
 
      <!--OLAY 6-->
     <div class="timeline-item right" data-month="Ocak">
-      <div class="content">
+      <div class="content"
+        data-images="images/gs1konya1.jpg,images/gs1konya2.jpg,images/gs1konya3.jpg,images/gs1konya4.jpg">
         <img src="images/gskon.jpg">
         <span class="year">25 Ocak 2025</span>
         <h3>GALATASARAY 1-0 KONYASPOR</h3>
@@ -146,7 +160,8 @@
 
      <!--OLAY 7-->
     <div class="timeline-item left" data-month="Ocak">
-      <div class="content">
+      <div class="content"
+        data-images="images/ajax2gs1.jpg,images/ajax2gs2.jpg,images/ajax2gs3.jpg,images/ajax2gs4.jpg">
         <img src="images/ajaxgsuel.jpg">
         <span class="year">30 Ocak 2025</span>
         <h3>AJAX 2-1 GALATASARAY</h3>
@@ -160,7 +175,8 @@
 
       <!--OLAY 8-->
     <div class="timeline-item right" data-month="Şubat">
-      <div class="content">
+      <div class="content"
+          data-images="images/gfkgs1.jpg,images/gfkgs2.jpg,images/gfkgs3.jpg,images/gfkgs4.jpg">
         <img src="images/gfkgs.jpg">
         <span class="year"> 3 Şubat 2025</span>
         <h3>GAZİANTEP FK 0-1 GALATASARAY</h3>
@@ -811,4 +827,3 @@
 <script src="gallery.js"></script>
 </body>
 </html>
-
