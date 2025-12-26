@@ -34,18 +34,21 @@
 </div>
 
 
-<div class="month-filter">
-  <button class="active" onclick="filterMonth('all')">Tümü</button>
-  <button onclick="filterMonth('Ocak')">Ocak</button>
-  <button onclick="filterMonth('Şubat')">Şubat</button>
-  <button onclick="filterMonth('Mart')">Mart</button>
-  <button onclick="filterMonth('Nisan')">Nisan</button>
-  <button onclick="filterMonth('Mayıs')">Mayıs</button>
-  <button onclick="filterMonth('Ağustos')">Ağustos</button>
-  <button onclick="filterMonth('Eylül')">Eylül</button>
-  <button onclick="filterMonth('Ekim')">Ekim</button>
-  <button onclick="filterMonth('Kasım')">Kasım</button>
-  <button onclick="filterMonth('Aralık')">Aralık</button>
+<div class="filter-wrapper">
+  <label for="monthSelect">Maçları Filtrele:</label>
+  <div class="custom-select">
+    <select id="monthSelect" onchange="filterMonth(this.value)">
+      <option value="all">Tüm Maçlar</option>
+      <option value="Ocak">Ocak</option>
+      <option value="Şubat">Şubat</option>
+      <option value="Mart">Mart</option>
+      <option value="Nisan">Nisan</option>
+      <option value="Mayıs">Mayıs</option>
+      <option value="Ağustos">Ağustos</option>
+      <option value="Eylül">Eylül</option>
+      <option value="Ekim">Ekim</option>
+    </select>
+  </div>
 </div>
 
 <!-- HERO HEADER -->
