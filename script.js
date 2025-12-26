@@ -84,3 +84,29 @@ document.addEventListener('click', (e) => {
         playlist.style.display = 'none';
     }
 });
+
+
+document.addEventListener('keydown', (e) => {
+  if (modal.style.display === 'flex') {
+    if (e.key === 'ArrowRight') nextBtn.click();
+    if (e.key === 'ArrowLeft') prevBtn.click();
+  }
+});
+
+function filterMonth(month) {
+  const items = document.querySelectorAll('.timeline-item');
+  
+  items.forEach(item => {
+    // Yumuşak geçiş efekti
+    item.style.opacity = '0';
+    
+    setTimeout(() => {
+      if (month === 'all' || item.getAttribute('data-month') === month) {
+        item.style.display = 'block';
+        setTimeout(() => item.style.opacity = '1', 50);
+      } else {
+        item.style.display = 'none';
+      }
+    }, 300); // 300ms sonra göster/gizle (geçiş efekti için)
+  });
+}
