@@ -228,29 +228,104 @@ body {
 }
 
 /* ===============================
-   MODAL RESPONSIVE
+   GÜÇLENDİRİLMİŞ MOBİL TASARIM
 ================================ */
 
 @media (max-width: 768px) {
+  /* Ana Container: Çizgiyi en sola çek */
+  .timeline-container {
+    width: 100%;
+    padding: 20px 10px;
+    margin: 0;
+  }
 
+  .timeline-container::after {
+    left: 20px; /* Çizgi artık en solda sabitleyici */
+  }
+
+  /* Her bir maç kutusu */
+  .timeline-item {
+    width: 100% !important;
+    padding-left: 50px !important; /* Çizgi ve kutu arasındaki boşluk */
+    padding-right: 15px !important;
+    left: 0 !important;
+    margin-bottom: 40px;
+    opacity: 1; /* Mobilde görünürlüğü garantileyelim */
+    transform: none !important;
+  }
+
+  /* Orta noktaları (Sarı Yuvarlaklar) çizgi üzerine hizala */
+  .timeline-item::after {
+    left: 12px !important;
+    top: 25px;
+    width: 15px;
+    height: 15px;
+  }
+
+  /* İçerik Kutusu */
+  .content {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .content img {
+    height: auto;
+    max-height: 250px;
+    object-fit: cover; /* Resimlerin yamulmasını önler */
+  }
+
+  /* Başlık ve Kupa Alanı (Hero) */
+  .hero-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cup {
+    width: 60px;
+  }
+
+  .title h1 {
+    font-size: 24px;
+  }
+
+  /* Müzik ve Galeri Butonları */
+  .month-filter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3'lü buton sırası */
+    gap: 5px;
+    padding: 0 10px;
+  }
+
+  .month-filter button {
+    padding: 8px 5px;
+    font-size: 11px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
   .modal img {
-    max-width: 92%;
-    max-height: 75%;
+    max-width: 95%;
+    max-height: 60%; /* Resim daha az yer kaplasın ki oklar rahat görünsün */
   }
 
   .nav {
-    font-size: 36px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
   }
-
-  .prev { left: 10px; }
-  .next { right: 10px; }
-
+  
+  .prev { left: 5px; }
+  .next { right: 5px; }
+  
   .close {
-    font-size: 32px;
-    top: 15px;
-    right: 20px;
+    top: 10px;
+    right: 15px;
+    font-size: 35px;
   }
 }
+
+
 
 .yt-btn{
   display: inline-block;
@@ -383,4 +458,46 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 60px; /* Ok boyutu büyütüldü */
+  background: rgba(0, 0, 0, 0.4); /* Hafif şeffaf arka plan */
+  border: none;
+  color: #cfa44a; /* GS Altın Sarısı */
+  cursor: pointer;
+  user-select: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Yuvarlak butonlar */
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.nav:hover {
+  background: rgba(207, 164, 74, 0.8); /* Üstüne gelince sarı arka plan */
+  color: #000;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Mobilde okların tasarımı */
+@media (max-width: 768px) {
+  .nav {
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6); /* Mobilde daha belirgin arka plan */
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
 }
